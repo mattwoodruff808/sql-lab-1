@@ -70,3 +70,50 @@ WHERE favorite_color IN ('Orange','Green', 'Kholin Blue');
 -- Problem 14
 SELECT * FROM person
 WHERE favorite_color IN ('Yellow with Black', 'Purple');
+
+-----------------------
+
+
+-- Table - Orders
+
+-- Problem 1
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    person_id INT,
+    product_name VARCHAR(150),
+    product_price FLOAT,
+    quantity INT
+);
+
+-- Problem 2
+INSERT INTO orders
+(person_id, product_name, product_price, quantity)
+VALUES
+(3434, 'Big Mac', 4.25, 2),
+(3434, 'Large Fry', 1, 1),
+(2000, 'Hot & Spicy McChicken', 1, 2),
+(4444, 'Crispy Sprite', 1, 1),
+(1233, 'Grand Mac', 7.49, 4);
+
+-- Problem 3
+SELECT * FROM orders;
+
+-- Problem 4
+SELECT SUM(quantity)
+FROM orders;
+
+-- Problem 5
+SELECT SUM(product_price * quantity)
+FROM orders;
+
+-- Problem 6
+SELECT SUM(product_price * quantity)
+FROM orders
+WHERE person_id = 3434;
+
+-----------------------
+
+
+-- Table - artist
+
+-- Problem 1
