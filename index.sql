@@ -74,7 +74,7 @@ WHERE favorite_color IN ('Yellow with Black', 'Purple');
 -----------------------
 
 
--- Table - Orders
+-- Table - orders
 
 -- Problem 1
 CREATE TABLE orders (
@@ -115,5 +115,36 @@ WHERE person_id = 3434;
 
 
 -- Table - artist
+
+-- Problem 1
+INSERT INTO artist
+(name)
+VALUES
+('NF'),
+('KK Slider'),
+('Jack Black');
+
+-- Problem 2
+SELECT * FROM artist
+ORDER BY name DESC
+LIMIT 10;
+
+-- Problem 3
+SELECT * FROM artist
+ORDER BY name ASC
+LIMIT 5;
+
+-- Problem 4
+SELECT * FROM artist
+WHERE name LIKE 'Black%';
+
+-- Problem 5
+SELECT * FROM artist
+WHERE name LIKE '%Black%';
+
+-----------------------
+
+
+-- Table - employee
 
 -- Problem 1
